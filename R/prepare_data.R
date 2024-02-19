@@ -161,8 +161,8 @@ not_in_train_columns <- c("EPO_NO", "CHARTNO",
                           "POST_Hbc", "POST_FUNC_DATE") # "PRE_FUNC_DATE",
 
 # Filter the observation what DIF_DAY1 is neither 2 nor 3
-epo_df <- epo_df[epo_df$week_n == 2 | epo_df$week_n == 3, ] # exclude week_n is not 2 or 3, n=368, remained 32218; exclude 296 obs, remained 22048
-epo_df <- epo_df[-which(epo_df$EPO_DRUG_NO == "2EPO20"),] # exclude EPO_DRUG_NO=2EPO20, n=6238, remained 25979
+epo_df <- epo_df[epo_df$week_n == 2 | epo_df$week_n == 3, ] # exclude week_n is not 2 or 3, n=296, remained 22048
+epo_df <- epo_df[-which(epo_df$EPO_DRUG_NO == "2EPO20"),] # exclude EPO_DRUG_NO=2EPO20, n=4495, remained 17553
 
 length(unique(epo_df$NAME1))
 
